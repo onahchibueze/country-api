@@ -6,7 +6,7 @@ import {
   getCountryByName,
   deleteCountry,
   getSummaryImage,
-  getStatus,
+
 } from "../controllers/countryController.js";
 import { pool } from "../config/db.js";
 
@@ -15,7 +15,7 @@ const router = express.Router();
 router.post("/refresh", refreshCountries);
 router.get("/", getCountries);
 router.get("/image", getSummaryImage);
-router.get("/status", getStatus);
+
 router.get("/:name", getCountryByName);
 router.delete("/:name", deleteCountry);
 router.post("/", async (req, res) => {
